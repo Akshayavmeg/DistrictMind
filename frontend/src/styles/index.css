@@ -1,0 +1,38 @@
+@import 'tailwindcss';
+
+/* Dark, restrained theme. The brief's visual direction is a Proposed Design Direction (AD-RES-002). */
+:root {
+  color-scheme: dark;
+  /* Inter is preferred but NOT loaded (no external font request in Step 1). Falls back to system fonts. */
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #020617;
+  color: #f1f5f9;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Selective glassmorphism: panel chrome only, never large or frequently updated surfaces. */
+.glass {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  backdrop-filter: blur(8px);
+}
+
+/* Respect the user's reduced-motion setting everywhere. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

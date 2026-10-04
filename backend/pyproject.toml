@@ -1,0 +1,21 @@
+[project]
+name = "districtmind-backend"
+version = "0.1.0"
+description = "DistrictMind modular monolith API (development scaffold)"
+requires-python = ">=3.14"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 120
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+# B008: FastAPI's Depends() in argument defaults is the framework idiom, not a bug.
+ignore = ["B008"]
+
+[tool.ruff.format]
+quote-style = "double"
