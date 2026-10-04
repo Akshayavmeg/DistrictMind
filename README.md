@@ -4,7 +4,9 @@
 
 ## Current phase
 
-**Development — Step 1: project scaffold and frontend/backend bootstrap.**
+**Development — Step 2: district reference and administrative foundation.**
+
+Step 1 (scaffold and bootstrap) is complete. Step 2 adds a 33-district administrative reference catalog, served by the backend at `GET /api/v1/districts` and `GET /api/v1/districts/{district_id}`, and an API-backed district list and detail in the frontend. See [docs/implementation/step-2-administrative-foundation.md](docs/implementation/step-2-administrative-foundation.md).
 
 This is a development scaffold. It is **not** a production system and does not claim production readiness.
 
